@@ -11,7 +11,7 @@
     </string>
     <string name="welcoming_text_description_detail" formatted="true">Региструйтесь указав свою электронную почту или номер телефона и парол
     </string>
-    <string name="sms_varification_text" formatted="true">Мы отправили смс с кодом на номер +99899 ******77
+    <string name="sms_varification_text" formatted="true">Мы отправили смс с кодом  на номер +99899 ******77
     </string>
     <string name="chayxana_registration_text" formatted="true">Чтобы зарегистровать Чайхану заполните список и отправте заявку
     </string>
