@@ -7,22 +7,18 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@id/progress_payment"
-        app:layout_constraintHorizontal_bias="0.961"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintLeft_toRightOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/hor3"
+        app:layout_constraintRight_toRightOf="@id/hor4"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.077"
         tools:ignore="MissingConstraints">
 
         <ImageButton
             android:id="@+id/backBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
             android:background="@drawable/ic_back"
             android:foregroundGravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -88,7 +84,9 @@
         android:id="@+id/btnContinueLay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnContinue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent">
@@ -98,24 +96,12 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:text="Переотправить СМС код"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toTopOf="@id/btnContinue"
+            android:textColor="@color/orange_500"
+            android:textSize="18sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/btnContinue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="44dp"
-            android:background="@drawable/custom_btn_style"
-            android:text="Продолжить"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="16:9"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -133,14 +119,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.18" />
+            app:layout_constraintGuide_percent="0.05" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/hor2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.82" />
+            app:layout_constraintGuide_percent="0.95" />
 
         <TextView
             android:id="@+id/welcomingText"
@@ -172,13 +158,16 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/pinViewLay"
-        android:layout_width="match_parent"
+
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/hor3"
+        app:layout_constraintRight_toRightOf="@id/hor4"
         app:layout_constraintTop_toBottomOf="@id/smsVerificationLay">
 
         <com.goodiebag.pinview.Pinview
             android:id="@+id/pinview"
+            app:layout_constraintCircleRadius="22dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -186,13 +175,39 @@
             app:forceKeyboard="true"
             app:inputType="text"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:password="false"
-            app:pinHeight="50dp"
+            app:pinHeight="40dp"
             app:pinLength="5"
-            app:pinWidth="50dp" />
+            app:pinWidth="40dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hor3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.07" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hor4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.93" />
+
+
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/custom_btn_style"
+        android:text="Оплатить"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="@id/hor3"
+        app:layout_constraintRight_toRightOf="@id/hor4" />
 </androidx.constraintlayout.widget.ConstraintLayout>
