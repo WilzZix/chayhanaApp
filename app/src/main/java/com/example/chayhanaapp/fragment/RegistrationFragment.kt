@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.chayhanaapp.R
 
-class RegistrationFragment : Fragment(R.layout.fragment_39_order_payment) {
+class RegistrationFragment : Fragment(R.layout.fragment_registration_succes_screen_5) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
     }
